@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pramod jokes</title>
+</head>
+<body>
+    
+    <div id="demo1">
+        <span id="demo"></span>
+        <hr>
+        
+    </div>
+    <script>
+       
+       let jokes = document.getElementById('demo');
+        const setHeader = {
+            headers:{
+                Accept:'application/json'
+            }
+        }
+      
+    //    fetch('https://icanhazdadjoke.com/', setHeader)
+    //    .then((res)=>res.json())
+    //    .then((data)=>jokes.innerHTML= `${data.joke}`);
+           
+        
+    const jokesapp = async ()=>{
+       let res=  await fetch('https://icanhazdadjoke.com/', setHeader);
+       let data = await res.json();
+
+       jokes.innerHTML= `${data.joke}`;
+    }
+    jokesapp();
+
+    </script>
+</body>
+</html>

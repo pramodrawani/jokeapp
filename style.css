@@ -1,0 +1,15 @@
+#demo1{
+    width:200px;
+    height:200px;
+    background-color: grey;
+    padding:24px;
+    color:blue;
+    margin:220px auto;
+    border-radius: 15px;
+    box-shadow: 5px 3px 2.5px green;
+}
+#demo{
+    color:aliceblue;
+    padding:12px;
+    
+}
